@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  font-size-adjust: 0.58;
+
+  min-height: 87.5vh; /* mmm, optics */
+  display: flex;
+  place-items: center;
+}
+
+main {
+  margin: auto;
+  padding: 2vw;
+  max-width: 96vw;
+  width: max-content;
+}
+
+h1, h2, h3, h4 {
+  font-family: serif;
+}
+h1, h2 { font-weight: 300; }
+h3, h4 { font-weight: 500; }
+
+.ithkuil {
+  color: hsl(0deg, 80%, 40%);
+}
+
+a {
+  font-family: serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: hsl(180deg, 80%, 40%);
+}
+
+a:not([href]) {
+  color: inherit;
+}
+
+a[href]:hover, a[href]:focus {
+  text-decoration: underline;
+  color: hsl(180deg, 40%, 40%);
+}
+
+.notice {
+  display: block;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: #eee;
+  width: max-content;
+  max-width: 100%;
+}

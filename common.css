@@ -1,3 +1,7 @@
+/*                 *
+ * General styling *
+ *                 */
+
 * {
   box-sizing: border-box;
 }
@@ -11,7 +15,7 @@ html, body {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family: Inter, sans-serif;
   font-size-adjust: 0.58;
 
   min-height: 87.5vh; /* mmm, optics */
@@ -27,17 +31,22 @@ main {
 }
 
 h1, h2, h3, h4 {
-  font-family: serif;
+  font-family: Inter, sans-serif;
 }
-h1, h2 { font-weight: 300; }
-h3, h4 { font-weight: 500; }
+
+h1 { font-weight: 300; }
+h2 { font-weight: 400; }
+h3 { font-weight: 500; }
+h4 { font-weight: 600; }
 
 .ithkuil {
   color: hsl(0deg, 80%, 40%);
+  font-family: Andika, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
-  font-family: serif;
   font-weight: 600;
   text-decoration: none;
   color: hsl(180deg, 80%, 40%);
@@ -60,3 +69,20 @@ a[href]:hover, a[href]:focus {
   width: max-content;
   max-width: 100%;
 }
+
+/*                   *
+ * Font declarations *
+ *                   */
+
+/* Andika */
+@font-face { font-family: 'Andika'; src: url('/assets/fonts/andika/Andika-R.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+
+/* Garamond EB */
+@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff2'); font-weight: 400; font-style: normal; }
+
+/* Inter */
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-Light.woff2')    format('woff2'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-Regular.woff2')  format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-Italic.woff2')   format('woff2'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-Light.woff2')    format('woff2'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; }

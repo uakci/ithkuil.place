@@ -39,7 +39,7 @@ h2 { font-weight: 400; }
 h3 { font-weight: 500; }
 h4 { font-weight: 600; }
 
-.ithkuil {
+:lang(ithkuil) {
   color: hsl(0deg, 80%, 40%);
   font-family: Andika, sans-serif;
   font-weight: normal;

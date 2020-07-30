@@ -12,6 +12,8 @@ html {
     --body-text-color: hsla(0, 0%, 15%, 1);
     --notice-background-color: hsla(0, 0%, 75%, 1);
     --notice-text-color: hsla(0, 0%, 10%, 1);
+    --important-background-color: hsl(0deg, 75%, 90%);
+    --important-text-color: hsl(0deg, 75%, 25%);
 }
 
 html, body {
@@ -85,6 +87,10 @@ a[href]:hover, a[href]:focus {
   color: var(--notice-text-color);
   width: max-content;
   max-width: 100%;
+}
+.notice--important {
+    background-color: var(--important-background-color);
+    color: var(--important-text-color);
 }
 
 /*                   *

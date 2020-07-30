@@ -7,13 +7,13 @@
 }
 
 html {
-    /* THEME VARIABLES */
-    --background-color: hsla(0, 0%, 95%, 1);
-    --body-text-color: hsla(0, 0%, 15%, 1);
-    --notice-background-color: hsla(0, 0%, 75%, 1);
-    --notice-text-color: hsla(0, 0%, 10%, 1);
-    --important-background-color: hsl(0deg, 75%, 90%);
-    --important-text-color: hsl(0deg, 75%, 25%);
+  /* THEME VARIABLES */
+  --background-color: hsla(0, 0%, 95%, 1);
+  --body-text-color: hsla(0, 0%, 15%, 1);
+  --notice-background-color: hsla(0, 0%, 75%, 1);
+  --notice-text-color: hsla(0, 0%, 10%, 1);
+  --important-background-color: hsl(0deg, 75%, 90%);
+  --important-text-color: hsl(0deg, 75%, 25%);
 }
 
 html, body {
@@ -45,8 +45,8 @@ main {
 }
 
 footer {
-    border-top: 1px solid;
-    font-size: 75%;
+  border-top: 1px solid;
+  font-size: 75%;
 }
 h1, h2, h3, h4 {
   font-family: Inter, sans-serif;
@@ -89,8 +89,8 @@ a[href]:hover, a[href]:focus {
   max-width: 100%;
 }
 .notice--important {
-    background-color: var(--important-background-color);
-    color: var(--important-text-color);
+  background-color: var(--important-background-color);
+  color: var(--important-text-color);
 }
 
 /*           *
@@ -100,47 +100,49 @@ a[href]:hover, a[href]:focus {
 .accordion {
 }
 .accordion__container {
-    position: relative;
+  position: relative;
 }
 .accordion__controls {
-    cursor: pointer;
-    padding: 0.5rem;
-    width: 100%;
-    display: flex;
-    place-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  place-items: center;
 }
 .accordion__controls::before {
-    content: "";
-    display: block;
-    height: 1rem;
-    width: 1rem;
-    clip-path: polygon(0 0, 0 100%, 100% 50%);
-    transform: rotate(90deg);
-    background: currentColor;
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  transform: rotate(90deg);
+  background: currentColor;
 }
 
 .accordion__title {
-    margin: 0.5rem 0.5rem 0.5rem 1rem;
-    /* background: inherit; */
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+  /* background: inherit; */
 }
 .accordion__button {
-    height: 0;
-    width: 0;
-    top: 0;
-    opacity: 0;
-    position: absolute;
+  height: 0;
+  width: 0;
+  top: 0;
+  opacity: 0;
+  position: absolute;
 }
 .accordion__button:checked {
 }
 .accordion__button:checked ~ .accordion__contents {
-    height: 0;
-    overflow: hidden;
+  height: 0;
+  overflow: hidden;
 }
 .accordion__button:checked ~ .accordion__controls::before {
-    transform: rotate(0);
+  transform: rotate(0);
 }
 .accordion__contents {
 }
+
+/*  */
 
 /*                   *
  * Font declarations *
@@ -163,10 +165,10 @@ a[href]:hover, a[href]:focus {
  * Media Queries *
  *               */
 @media (prefers-color-scheme: dark) {
-    html {
-	--background-color: hsla(0, 0%, 15%, 1);
-	--body-text-color: hsla(0, 0%, 95%, 1);
-	--notice-background-color: hsla(0, 0%, 75%, 1);
-	--notice-text-color: hsla(0, 0%, 10%, 1);
-    }
+  html {
+    --background-color: hsla(0, 0%, 15%, 1);
+    --body-text-color: hsla(0, 0%, 95%, 1);
+    --notice-background-color: hsla(0, 0%, 75%, 1);
+    --notice-text-color: hsla(0, 0%, 10%, 1);
+  }
 }

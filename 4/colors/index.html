@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TNIL Color Picker</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pick a color and get a TNIL root.">
+
+    <link rel="stylesheet" type="text/css" href="/common.css">
+    <link rel="stylesheet" type="text/css" href="./colors.css">
+  </head>
+  <body>
+    <label class="menu" title="Help">
+      <input id="menu-toggle" type="checkbox"/>
+      <aside class="menu-panel">
+        <h1>Describing Color in the Ithkuil Successor Language</h1>
+        <p>
+          Color terms in <abbr title="The Next Ithkuilic Language">TNIL</abbr>
+          describe an
+          <a href="https://en.wikipedia.org/wiki/HSL_and_HSV" target="_blank">
+            HSL color space<!--
+          --></a>.
+          There are eight roots referring to hue with three stems apiece,
+          meaning that each of the 24 hue lexemes cover 15° on the color
+          wheel. Additionally, there are roots with stems for white and
+          black, plus a root with stems for light, medium, and dark gray.
+        </p><p>
+          This converter divides color space into regions corresponding to
+          each of the 11 color-related roots. Pick a color to see the
+          corresponding TNIL root!
+        </p><p>
+          <strong>Note:</strong> TNIL is even more expressive than this,
+          since it has suffixes for modifying color terms and ways of turning
+          nouns and verbs into color terms by derivation. Maybe some day I'll
+          add suffix recommendations to this thing!
+        </p><p>
+          For more information about TNIL color terms, check out the
+          <a href="http://www.ithkuil.net/list_of_roots_v_0_3.pdf#page=142"
+             target="_blank">
+            root listing<!--
+          --></a>!
+          To learn more about the Ithkuil successor language, visit
+          <a href="https://www.reddit.com/r/Ithkuil/" target="_blank">
+            our subreddit<!--
+          --></a>!
+        </p>
+      </aside>
+    </label>
+
+    <main>
+      <div id="color-picker-div">
+        <label for="color-selection">Select a color:</label>
+        <input name="color-selection" id="color-picker" type="color"
+              value="#000000" />
+        <output lang="ithkuil"></output>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <i><a href="https://gist.github.com/porpoiseless/bcf9cfdf152efe3d805ae4e48dcdab71">
+          TNIL Color Picker<!--
+        --></a></i> courtesy of
+        <a href="https://github.com/porpoiseless">
+          porpoiseless<!--
+        --></a>.
+      </p>
+    </footer>
+
+    <script src="colors.js"></script>
+  </body>
+</html>

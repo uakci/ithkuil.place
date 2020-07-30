@@ -10,8 +10,8 @@ html {
       --hyperlink-dormant-color: hsl(180deg, 40%, 40%);
   --hyperlink-highlighted-color: hsl(180deg, 80%, 40%);
   /* Regular notice/blockquote */
-      --notice-background-color: hsl(0deg, 75%, 90%);
-            --notice-text-color: hsl(0deg, 75%, 25%);
+      --notice-background-color: hsl(0deg, 0%, 90%);
+            --notice-text-color: hsl(0deg, 0%, 25%);
   /* Important/error-reporting notice */
    --important-background-color: hsl(0deg, 75%, 90%);
          --important-text-color: hsl(0deg, 75%, 25%);

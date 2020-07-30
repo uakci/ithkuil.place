@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+    /* THEME VARIABLES */
+    --background-color: hsla(0, 0%, 95%, 1);
+    --body-text-color: hsla(0, 0%, 15%, 1);
+    --notice-background-color: hsla(0, 0%, 75%, 1);
+    --notice-text-color: hsla(0, 0%, 10%, 1);
+}
+
 html, body {
   width: 100%;
   margin: 0;
@@ -21,6 +29,8 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
+  background: var(--background-color);
+  color: var(--body-text-color);
 }
 main, footer {
   margin: auto;
@@ -71,7 +81,8 @@ a[href]:hover, a[href]:focus {
   display: block;
   padding: 1em;
   margin: 1em 0;
-  background-color: #eee;
+  background-color: var(--notice-background-color);
+  color: var(--notice-text-color);
   width: max-content;
   max-width: 100%;
 }
@@ -92,3 +103,15 @@ a[href]:hover, a[href]:focus {
 @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-Italic.woff2')   format('woff2'); font-weight: 400; font-style: italic; }
 @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-Light.woff2')    format('woff2'); font-weight: 500; font-style: normal; }
 @font-face { font-family: 'Inter'; src: url('/assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; }
+
+/*               *
+ * Media Queries *
+ *               */
+@media (prefers-color-scheme: dark) {
+    html {
+	--background-color: hsla(0, 0%, 15%, 1);
+	--body-text-color: hsla(0, 0%, 95%, 1);
+	--notice-background-color: hsla(0, 0%, 75%, 1);
+	--notice-text-color: hsla(0, 0%, 10%, 1);
+    }
+}

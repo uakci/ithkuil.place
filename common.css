@@ -34,7 +34,7 @@ body {
   background: var(--background-color);
   color: var(--body-text-color);
 }
-main, footer {
+main, footer, header {
   margin: auto;
   padding: 2vw;
   max-width: 96vw;

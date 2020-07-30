@@ -98,7 +98,6 @@ output {
   padding: 0.5rem;
   background: var(--notice-background-color);
   transition: 350ms;
-  border-right: 1px solid var(--border);
   z-index: 0;
   overflow-y: auto;
 }

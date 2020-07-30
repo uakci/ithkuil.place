@@ -17,19 +17,24 @@ body {
   line-height: 1.5;
   font-family: Inter, sans-serif;
   font-size-adjust: 0.58;
-
-  min-height: 87.5vh; /* mmm, optics */
+  min-height: 100vh; /* mmm, optics */
   display: flex;
+  flex-direction: column;
   place-items: center;
 }
-
-main {
+main, footer {
   margin: auto;
   padding: 2vw;
   max-width: 96vw;
   width: max-content;
 }
+main {
+  flex-grow: 1;
+}
 
+footer {
+    border-top: 1px solid;
+}
 h1, h2, h3, h4 {
   font-family: Inter, sans-serif;
 }

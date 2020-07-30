@@ -34,6 +34,7 @@ main {
 
 footer {
     border-top: 1px solid;
+    font-size: 75%;
 }
 h1, h2, h3, h4 {
   font-family: Inter, sans-serif;

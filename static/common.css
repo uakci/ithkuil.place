@@ -11,7 +11,7 @@ html {
   --hyperlink-highlighted-color: hsl(180deg, 80%, 40%);
   /* Regular notice/blockquote */
       --notice-background-color: hsl(0deg, 0%, 90%);
-            --notice-text-color: hsl(0deg, 0%, 25%);
+            --notice-text-color: hsl(0deg, 0%, 15%);
   /* Important/error-reporting notice */
    --important-background-color: hsl(0deg, 75%, 90%);
          --important-text-color: hsl(0deg, 75%, 25%);
@@ -39,7 +39,7 @@ a {
         --hyperlink-dormant-color: hsl(180deg, 40%, 60%);
     --hyperlink-highlighted-color: hsl(180deg, 80%, 60%);
         --notice-background-color: hsl(0deg, 0%, 10%);
-              --notice-text-color: hsl(0deg, 0%, 75%);
+              --notice-text-color: hsl(0deg, 0%, 85%);
      --important-background-color: hsl(0deg, 75%, 10%);
            --important-text-color: hsl(0deg, 75%, 75%);
              --ithkuil-text-color: hsl(0deg, 80%, 60%);
@@ -64,10 +64,9 @@ a {
 /** Invariants **/
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: Inter, sans-serif;
-  font-size-adjust: 0.75; /* Inter’s actual aspect value (1536 ÷ 2048) */
 }
 
 body {

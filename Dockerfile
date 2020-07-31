@@ -1,7 +1,7 @@
 FROM alpine:latest
 RUN apk add nodejs npm nginx
 
-COPY variable dirty/
+COPY variable/ dirty/
 WORKDIR /dirty
 RUN npm install && npm start
 WORKDIR /

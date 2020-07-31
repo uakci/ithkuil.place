@@ -3,7 +3,7 @@ RUN apk add nginx
 
 COPY variable/ dirty/
 WORKDIR /dirty/
-RUN ["generate.sh"]
+RUN ./generate.sh
 WORKDIR /
 RUN test -e dirty/output/ && test "$(ls dirty/output/)" && mv dirty/output/* clean/; rm -r dirty
 

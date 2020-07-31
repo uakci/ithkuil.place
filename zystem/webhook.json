@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ithkuil-place",
+    "command-working-directory": "/ithkuil/",
+    "execute-command": "/ithkuil/pull.sh",
+    "trigger-rule": {
+      "match": {
+        "type": "payload-hash-sha1",
+        "secret": secret goes in here,
+        "parameter": {
+          "source": "header",
+          "name": "X-Hub-Signature"
+        }
+      }
+    },
+    "trigger-rule-mismatch-http-response-code": 401
+  }
+]

@@ -221,7 +221,7 @@ footer {
 @font-face { font-family: 'Andika';   src: url('/assets/fonts/andika/Andika-R.woff2')              format('woff2'); font-weight: 400; font-style: normal; }
 
 /* Garamond EB */
-@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff');  font-weight: 400; font-style: normal; }
 
 /* Inter */
 @font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-ExtraLight.woff2')       format('woff2'); font-weight: 200; font-style: normal; }

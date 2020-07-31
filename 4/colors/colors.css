@@ -1,0 +1,131 @@
+html {
+  --border: #777;
+  --page: #000;
+}
+
+body {
+  background: var(--page);
+}
+
+footer {
+  background-color: hsl(0deg, 0%, 50%, 10%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#color-picker-div {
+  margin: auto;
+  padding: 1.5rem;
+  background: var(--notice-background-color);
+  color: var(--notice-text-color);
+  border: 1px solid var(--border);
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+#color-picker-div > * {
+  display: block;
+}
+
+#color-picker {
+  border: 1px solid var(--border);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+#color-picker::-webkit-color-swatch,
+#color-picker::-moz-color-swatch {
+  border: none;
+}
+
+output {
+  border-radius: 2px;
+  min-height: 1.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.menu {
+  position: fixed;
+  align-self: start;
+  cursor: pointer;
+  z-index: 1;
+  top: 1em;
+  left: 1em;
+}
+
+.menu:after {
+  content: "?";
+  background: var(--notice-background-color);
+  color: var(--notice-text-color);
+  position: absolute;
+  border: 1px solid var(--border);
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(-100%);
+  padding: 0.5rem;
+  background: var(--notice-background-color);
+  transition: 350ms;
+  z-index: 0;
+  overflow-y: auto;
+}
+
+.menu-panel > * {
+  margin: 1rem 1rem 1rem 2.5rem;
+}
+
+#menu-toggle {
+  position: relative;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+#menu-toggle:checked {
+  z-index: 1;
+}
+
+#menu-toggle:checked + .menu-panel {
+  transform: translateX(0);
+  transition: 200ms;
+}
+
+@media (min-width: 32rem) {
+  .menu-panel > * {
+    max-width: 27rem;
+    margin: 1.5rem auto;
+  }
+}

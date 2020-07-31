@@ -1,9 +1,9 @@
 #!/bin/busybox sh
 set -e
 
-apk add node npm
+apk add nodejs npm
 
 npm install
 npm start
 
-apk del node npm
+apk del nodejs npm

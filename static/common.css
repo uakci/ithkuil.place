@@ -7,8 +7,8 @@ html {
              --background-color: hsl(0deg, 0%, 100%);
               --body-text-color: hsl(0deg, 0%, 15%);
   /* Link coloring */
-      --hyperlink-dormant-color: hsl(180deg, 40%, 40%);
-  --hyperlink-highlighted-color: hsl(180deg, 80%, 40%);
+      --hyperlink-dormant-color: hsl(180deg, 80%, 40%);
+  --hyperlink-highlighted-color: hsl(180deg, 40%, 40%);
   /* Regular notice/blockquote */
       --notice-background-color: hsl(0deg, 0%, 90%);
             --notice-text-color: hsl(0deg, 0%, 15%);

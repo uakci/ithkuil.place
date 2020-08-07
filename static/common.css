@@ -7,11 +7,11 @@ html {
              --background-color: hsl(0deg, 0%, 100%);
               --body-text-color: hsl(0deg, 0%, 15%);
   /* Link coloring */
-      --hyperlink-dormant-color: hsl(180deg, 40%, 40%);
-  --hyperlink-highlighted-color: hsl(180deg, 80%, 40%);
+      --hyperlink-dormant-color: hsl(180deg, 80%, 40%);
+  --hyperlink-highlighted-color: hsl(180deg, 40%, 40%);
   /* Regular notice/blockquote */
       --notice-background-color: hsl(0deg, 0%, 90%);
-            --notice-text-color: hsl(0deg, 0%, 25%);
+            --notice-text-color: hsl(0deg, 0%, 15%);
   /* Important/error-reporting notice */
    --important-background-color: hsl(0deg, 75%, 90%);
          --important-text-color: hsl(0deg, 75%, 25%);
@@ -39,7 +39,7 @@ a {
         --hyperlink-dormant-color: hsl(180deg, 40%, 60%);
     --hyperlink-highlighted-color: hsl(180deg, 80%, 60%);
         --notice-background-color: hsl(0deg, 0%, 10%);
-              --notice-text-color: hsl(0deg, 0%, 75%);
+              --notice-text-color: hsl(0deg, 0%, 85%);
      --important-background-color: hsl(0deg, 75%, 10%);
            --important-text-color: hsl(0deg, 75%, 75%);
              --ithkuil-text-color: hsl(0deg, 80%, 60%);
@@ -64,10 +64,9 @@ a {
 /** Invariants **/
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: Inter, sans-serif;
-  font-size-adjust: 0.75; /* Inter’s actual aspect value (1536 ÷ 2048) */
 }
 
 body {
@@ -221,7 +220,7 @@ footer {
 @font-face { font-family: 'Andika';   src: url('/assets/fonts/andika/Andika-R.woff2')              format('woff2'); font-weight: 400; font-style: normal; }
 
 /* Garamond EB */
-@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff');  font-weight: 400; font-style: normal; }
 
 /* Inter */
 @font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-ExtraLight.woff2')       format('woff2'); font-weight: 200; font-style: normal; }

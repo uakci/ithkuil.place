@@ -1,0 +1,11 @@
+{
+  "name": "ithkuil.place",
+  "description": "for building the ithkuil.place website",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node build.js"
+  },
+  "dependencies": {}
+}

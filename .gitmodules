@@ -1,3 +1,3 @@
-[submodule "static/4/NILDB"]
-	path = static/4/NILDB
+[submodule "static/4/docs/NILDB"]
+	path = static/4/docs/NILDB
 	url = git@github.com:Philosophical-Language-Group/NILDB.git

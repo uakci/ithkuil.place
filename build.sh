@@ -7,12 +7,6 @@ if [ ! -f /.dockerenv ]; then
   exit 1
 fi
 
-# add ‘testing’ branch
-head -n1 /etc/apk/repositories | \
-  sed 's#/[^/]*/main$#/edge/testing#' >> /etc/apk/repositories
-PACKAGES="pandoc bash"
-apk add $PACKAGES
-
 ## NILDB
 cd /src/4/docs/nildb
 for dir in . */; do
@@ -21,5 +15,3 @@ for dir in . */; do
 done
 cd ..
 rm -r nildb freetnil
-
-apk del $PACKAGES

@@ -1,3 +1,6 @@
-[submodule "static/4/docs/src/NILDB"]
-	path = static/4/docs/src/NILDB
-	url = git@github.com:Philosophical-Language-Group/NILDB.git
+[submodule "src/4/docs/freetnil"]
+	path = src/4/docs/freetnil
+	url = https://github.com/Philosophical-Language-Group/freetnil/
+[submodule "src/4/docs/nildb"]
+	path = src/4/docs/nildb
+	url = https://github.com/Philosophical-Language-Group/NILDB/

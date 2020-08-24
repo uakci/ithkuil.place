@@ -1,5 +1,9 @@
 #!/bin/bash
 set -e
+
+NAME=ithkuil.place
+REPO=https://github.com/uakci/ithkuil.place
+
 self="$(realpath "$0")"
 lock="$(dirname "$self")/pull.lock"
 
@@ -17,7 +21,7 @@ error() {
 }
 
 run_image() {
-  docker run -d -p 127.0.0.1:9997:80/tcp --name ithkuil.place $1
+  docker run -d -p 127.0.0.1:9997:80/tcp --name "$NAME" $1
 }
 
 remove_image() {
@@ -27,21 +31,23 @@ remove_image() {
 }
 
 unplug() {
-  docker stop ithkuil.place || :
-  docker rm ithkuil.place
+  docker stop "$NAME" || :
+  docker rm "$NAME"
 }
 
-if [ ! -e ithkuil.place ]; then
-  git clone https://github.com/uakci/ithkuil.place
-  cd ithkuil.place
+if [ ! -e "$NAME" ]; then
+  git clone "$REPO"
+  cd "$NAME"
+  git submodule update --init --recursive
 else
-  cd ithkuil.place
-  git pull --force
+  cd "$NAME"
+  git pull --ff-only
+  git submodule update --recursive --remote
 fi
-old_image=$(docker images ithkuil.place:latest -q)
+old_image=$(docker images "$NAME":latest -q)
 
-docker build -t ithkuil.place .
-new_image=$(docker images ithkuil.place:latest -q)
+docker build -t "$NAME" .
+new_image=$(docker images "$NAME":latest -q)
 
 if [ "$(docker ps -qaf name=/ithkuil.place)" ]; then
   unplug
@@ -49,7 +55,7 @@ fi
 run_image $new_image
 sleep 2
 
-if [ ! "$(docker inspect ithkuil.place | jq -r '.[0].State.ExitCode')" = 0 ]; then
+if [ ! "$(docker inspect "$NAME" | jq -r '.[0].State.ExitCode')" = 0 ]; then
   unplug
   remove_image $new_image
   run_image $old_image

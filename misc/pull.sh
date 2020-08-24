@@ -3,16 +3,10 @@ set -e
 
 NAME=ithkuil.place
 REPO=https://github.com/uakci/ithkuil.place
+FLAGS="-p 127.0.0.1:9997:80/tcp"
 
 self="$(realpath "$0")"
 lock="$(dirname "$self")/pull.lock"
-
-if [ -e "$lock" ]; then
-  echo waiting for process $(cat "$lock") to finish…
-  while [ -e "$lock" ]; do sleep 1; done
-fi
-echo $$ > "$lock"
-trap 'error $LINENO $?' ERR
 
 error() {
   echo error on line $1: "$(sed $1q\;d $self)" >&2
@@ -20,14 +14,20 @@ error() {
   exit $2
 }
 
+trap 'error $LINENO $?' ERR
+
+if [ -e "$lock" ]; then
+  echo waiting for process $(cat "$lock") to finish…
+  while [ -e "$lock" ]; do sleep 1; done
+fi
+echo $$ > "$lock"
+
 run_image() {
-  docker run -d -p 127.0.0.1:9997:80/tcp --name "$NAME" $1
+  docker run -d $FLAGS --name "$NAME" $1
 }
 
 remove_image() {
-  if [ "$1" ]; then
-    docker rmi "$1"
-  fi
+  [ "$1" ] && docker rmi "$1"
 }
 
 unplug() {
@@ -49,9 +49,7 @@ old_image=$(docker images "$NAME":latest -q)
 docker build -t "$NAME" .
 new_image=$(docker images "$NAME":latest -q)
 
-if [ "$(docker ps -qaf name=/ithkuil.place)" ]; then
-  unplug
-fi
+[ "$(docker ps -qaf name=/"$NAME")" ] && unplug
 run_image $new_image
 sleep 2
 

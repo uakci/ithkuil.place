@@ -42,7 +42,7 @@ if [ ! -e "$NAME" ]; then
 else
   cd "$NAME"
   git pull --ff-only
-  git submodule update --recursive --remote
+  git submodule update --recursive
 fi
 old_image=$(docker images "$NAME":latest -q)
 

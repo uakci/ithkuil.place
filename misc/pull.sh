@@ -46,6 +46,7 @@ else
 fi
 old_image=$(docker images "$NAME":latest -q)
 
+./build.sh
 docker build -t "$NAME" .
 new_image=$(docker images "$NAME":latest -q)
 

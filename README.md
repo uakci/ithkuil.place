@@ -7,9 +7,9 @@ resources, tools, weblets, and maybe even computer-friendly APIs and
 
 ## Technical overview
 
-`./build.sh` converts and copies files to `/target/` as needed, then
-creates a Docker image (quite aptly tagged `ithkuil.place`). It
-requires `docker`, `git`, `pandoc`, and `tree` to run. At the moment,
-the Docker container just serves static files with `nginx`; however,
-more sophisticated setups are possible and should be easy to
-implement.
+`./build.sh` converts and copies files to `/target/` as needed, then creates a
+Docker image (quite aptly tagged `ithkuil.place`). It requires `bash`,
+`docker`, `git`, `pandoc`, `tree`, GNU coreutils, and `flock` (of util-linux)
+to run. (These are checked at runtime.) At the moment, the Docker container
+just serves static files with `nginx`; however, more sophisticated setups are
+possible and should be easy to implement.

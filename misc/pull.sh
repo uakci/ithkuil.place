@@ -38,12 +38,11 @@ unplug() {
 if [ ! -e "$NAME" ]; then
   git clone "$REPO"
   cd "$NAME"
-  git submodule update --init --recursive
 else
   cd "$NAME"
   git pull --ff-only
-  git submodule update --recursive
 fi
+git submodule update --init --recursive --force
 old_image=$(docker images "$NAME":latest -q)
 
 docker build -t "$NAME" .

@@ -8,7 +8,7 @@ fi
 
 head -n1 /etc/apk/repositories | \
   sed 's#/[^/]*/main$#/edge/testing#' >> /etc/apk/repositories
-apk add --no-cache nginx pandoc tree
+apk add nginx pandoc tree
 cd /src
 
 PREFIX="src/4/docs/nildb"
@@ -25,11 +25,12 @@ cd /www
 cd 4/archive
 tar --create --file all.tar.gz *.pdf
 {
-  sed '/%%%/q' /src/4/archive/index.html.template
+  sed -n '/%%%/q;p' /src/4/archive/index.html.template
   for f in *.pdf; do
     echo "<li><a href="$f">"$f"</a></li>"
   done
-  sed ',/%%%/d' /src/4/archive/index.html.template
+  sed -n '/%%%/,$p' /src/4/archive/index.html.template | \
+    sed -n '2,$p' -
 } > index.html
 cd /www
 
@@ -40,4 +41,5 @@ cd /www
 } > SITEMAP
 
 rm -rf /src
-apk del --no-cache pandoc tree bash
+apk del pandoc tree bash
+rm -rf /var/cache /var/www

@@ -4,3 +4,9 @@
 [submodule "src/4/docs/nildb"]
 	path = src/4/docs/nildb
 	url = https://github.com/Philosophical-Language-Group/NILDB/
+[submodule "www/4/archive"]
+	path = www/4/archive
+	url = https://uakci.eu/files/ithkuil/git/archive/
+[submodule "www/mirror"]
+	path = www/mirror
+	url = https://uakci.eu/files/ithkuil/git/mirror/

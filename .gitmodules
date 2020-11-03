@@ -6,7 +6,7 @@
 	url = https://github.com/Philosophical-Language-Group/NILDB/
 [submodule "www/4/archive"]
 	path = www/4/archive
-	url = git://uakci.eu/archive/
+	url = git://uakci.eu/ithkuil/archive/
 [submodule "www/mirror"]
 	path = www/mirror
-  url = git://uakci.eu/mirror/
+  url = git://uakci.eu/ithkuil/mirror/

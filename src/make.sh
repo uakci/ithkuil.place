@@ -6,9 +6,10 @@ if [ ! -f /.dockerenv ]; then
   exit 1
 fi
 
+# shellcheck disable=SC2094
 head -n1 /etc/apk/repositories | \
   sed 's#/[^/]*/main$#/edge/testing#' >> /etc/apk/repositories
-apk add nginx pandoc tree
+apk add --no-cache nginx pandoc tree
 cd /src
 
 PREFIX="src/4/docs/nildb"
@@ -23,11 +24,15 @@ cd /www
 /src/mirroring/modify.sh
 
 cd 4/archive
-tar --create --file all.tar.gz *.pdf
+tar --create --file all.tar.gz ./**/*.pdf
 {
   sed -n '/%%%/q;p' /src/4/archive/index.html.template
-  for f in *.pdf; do
-    echo "<li><a href="$f">"$f"</a></li>"
+  for f in **/*.pdf; do
+    prefix="$(dirname "$f")/"
+    core="$(basename "$f")"
+    suffix="${core: -15}"
+    core="${core:0:-15}"
+    echo "<li>$prefix<a href=$f>$core</a>$suffix</li>"
   done
   sed -n '/%%%/,$p' /src/4/archive/index.html.template | \
     sed -n '2,$p' -
@@ -41,5 +46,4 @@ cd /www
 } > SITEMAP
 
 rm -rf /src
-apk del pandoc tree bash
-rm -rf /var/cache /var/www
+apk del --no-cache pandoc tree bash

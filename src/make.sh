@@ -39,11 +39,7 @@ tar --create --file all.tar.gz ./**/*.pdf
 } > index.html
 cd /www
 
-{
-  echo -n "<pre>"
-  tree -nf --noreport /www/ | paste -d'\t' - - | sed '1d;s|── /www/|── <a href="|;s|\t|">|;s|$|</a>|'
-  echo "</pre>"
-} > SITEMAP
+tree -H / . > SITEMAP.html
 
 rm -rf /src
 apk del --no-cache pandoc tree bash

@@ -7,10 +7,6 @@ body {
   background: var(--page);
 }
 
-footer {
-  background-color: hsl(0deg, 0%, 50%, 10%);
-}
-
 main {
   display: flex;
   flex-direction: column;

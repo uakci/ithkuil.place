@@ -6,12 +6,7 @@ if [ ! -f /.dockerenv ]; then
   exit 1
 fi
 
-# shellcheck disable=SC2094
-head -n1 /etc/apk/repositories | \
-  sed 's#/[^/]*/main$#/edge/testing#' >> /etc/apk/repositories
-apk add --no-cache nginx pandoc tree
 cd /src
-
 PREFIX="src/4/docs/nildb"
 for file in "$PREFIX"/!(_*).yml "$PREFIX"/**/!(_*).yml; do
   target="/www/4/docs/${file##$PREFIX/}" target="${target%%.yml}.html"
@@ -40,6 +35,3 @@ tar --create --file all.tar.gz ./**/*.pdf
 cd /www
 
 tree -H / . > SITEMAP.html
-
-rm -rf /src
-apk del --no-cache pandoc tree bash

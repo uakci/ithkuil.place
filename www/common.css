@@ -217,20 +217,20 @@ footer {
 /*** Font declarations ***/
 
 /* Andika */
-@font-face { font-family: 'Andika';   src: url('/assets/fonts/andika/Andika-R.woff2')              format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Andika';   src: url('/assets/fonts/andika/Andika-R.woff2')              format('woff2'); font-weight: 400; font-style: normal; font-display: small; }
 
 /* Garamond EB */
-@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff');  font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Garamond'; src: url('/assets/fonts/garamond/EBGaramond12-Regular.woff') format('woff');  font-weight: 400; font-style: normal; font-display: small; }
 
 /* Inter */
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-ExtraLight.woff2')       format('woff2'); font-weight: 200; font-style: normal; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-ExtraLightItalic.woff2') format('woff2'); font-weight: 200; font-style: italic; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Light.woff2')            format('woff2'); font-weight: 300; font-style: normal; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-LightItalic.woff2')      format('woff2'); font-weight: 300; font-style: italic; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Regular.woff2')          format('woff2'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Italic.woff2')           format('woff2'); font-weight: 400; font-style: italic; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Medium.woff2')           format('woff2'); font-weight: 500; font-style: normal; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-MediumItalic.woff2')     format('woff2'); font-weight: 500; font-style: italic; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-SemiBold.woff2')         format('woff2'); font-weight: 600; font-style: normal; }
-@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-SemiBoldItalic.woff2')   format('woff2'); font-weight: 600; font-style: italic; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-ExtraLight.woff2')       format('woff2'); font-weight: 200; font-style: normal; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-ExtraLightItalic.woff2') format('woff2'); font-weight: 200; font-style: italic; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Light.woff2')            format('woff2'); font-weight: 300; font-style: normal; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-LightItalic.woff2')      format('woff2'); font-weight: 300; font-style: italic; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Regular.woff2')          format('woff2'); font-weight: 400; font-style: normal; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Italic.woff2')           format('woff2'); font-weight: 400; font-style: italic; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-Medium.woff2')           format('woff2'); font-weight: 500; font-style: normal; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-MediumItalic.woff2')     format('woff2'); font-weight: 500; font-style: italic; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-SemiBold.woff2')         format('woff2'); font-weight: 600; font-style: normal; font-display: small; }
+@font-face { font-family: 'Inter';    src: url('/assets/fonts/inter/Inter-SemiBoldItalic.woff2')   format('woff2'); font-weight: 600; font-style: italic; font-display: small; }
 

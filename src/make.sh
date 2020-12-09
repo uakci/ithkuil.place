@@ -6,13 +6,12 @@ if [ ! -f /.dockerenv ]; then
   exit 1
 fi
 
-cd /src
-PREFIX="src/4/docs/nildb"
-for file in "$PREFIX"/!(_*).yml "$PREFIX"/**/!(_*).yml; do
+PREFIX="/src/4/docs/nildb"
+for file in "$PREFIX"/**/!(_*).yml; do
   target="/www/4/docs/${file##$PREFIX/}" target="${target%%.yml}.html"
   mkdir -p "$(dirname "$target")"
-  ./src/4/docs/freetnil/build/scripts/convert-one.sh "$file" "$target" \
-    "src/4/docs/freetnil/build/templates/category.html"
+  /src/4/docs/freetnil/build/scripts/convert-one.sh "$file" "$target" \
+    /src/4/docs/freetnil/build/templates/category.html
 done
 
 cd /www

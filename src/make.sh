@@ -21,16 +21,21 @@ cd 4/archive
 tar --create --file all.tar.gz ./**/*.pdf
 {
   sed -n '/%%%/q;p' /src/4/archive/index.html.template
-  for f in **/*.pdf; do
-    prefix="$(dirname "$f")/"
-    core="$(basename "$f")"
-    suffix="${core: -15}"
-    core="${core:0:-15}"
-    echo "<li>$prefix<a href=$f>$core</a>$suffix</li>"
+  for prefix in **/; do
+    ls "$prefix"*.* >&- || continue
+    echo "<h2>$(basename "${prefix:0:-1}" | sed -E 's/-/ /g;s/(^| )./\U&/g')</h2>"
+    echo "<ul>"
+    for f in "$prefix"*; do
+      core="${f##$prefix}"
+      suffix="${core: -15}"
+      core="${core%%$suffix}"
+      echo "  <li><a href=$f>$core</a>​$suffix</li>"
+    done
+    echo "</ul>"
   done
   sed -n '/%%%/,$p' /src/4/archive/index.html.template | \
     sed -n '2,$p' -
 } > index.html
 cd /www
 
-tree -H / . > SITEMAP.html
+tree -H "" . > SITEMAP.html

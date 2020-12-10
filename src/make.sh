@@ -26,10 +26,12 @@ tar --create --file all.tar.gz ./**/*.pdf
 {
   sed -n '/%%%/q;p' /src/4/archive/index.html.template
   for prefix in **/; do
-    ls "$prefix"*.* >&- || continue
-    echo "<h2>$(capitalize "$(basename "${prefix%/}")")</h2>"
-    echo "<ul class=figure>"
-    for f in "$prefix"*.*; do
+    h=$(tr -cd / <<< "/$prefix" | wc -c)
+    echo "<h$h>$(capitalize "$(basename "${prefix%/}")")</h$h>"
+    [ -n "$(echo "$prefix"*?.?*)" ] || continue
+    echo '<ul class=figure>'
+    # shellcheck disable=SC2012
+    ls -Ard -- "$prefix"*?.?* | while read -r f; do
       core="${f##$prefix}"
       extension="${core##*.}"
       core="${core%%.$extension}"
@@ -40,10 +42,19 @@ tar --create --file all.tar.gz ./**/*.pdf
       if [ ! "$versionless" = "$core" ]; then
         version="${core##$versionless}"
         core="${core%%$version}"
-        version=" ${version:1}"
+        version="${version:1}"
       fi
-      echo "  <li><a href=\"$f\">$(capitalize "$core")$version</a> (.$extension, $date)</li>"
-      echo "  <li><a href=\"$f\">$(capitalize "$core")$version</a> (.$extension, $date)</li>" >&2
+      pre="$(capitalize "$core") "
+      link="$version"
+      if [ "$core" = "$(basename "$prefix")" ]; then
+        pre=
+      fi
+      if [ -z "$version" ]; then
+        pre=
+        link="$(capitalize "$core")"
+      fi
+      echo "  <li>$pre<a href=\"$f\">$link</a> (.$extension, $date)</li>"
+      echo "  <li>$pre<a href=\"$f\">$link</a> (.$extension, $date)</li>" >&2
     done
     echo "</ul>"
   done

@@ -156,6 +156,14 @@ footer {
   max-width: 100%;
 }
 
+ul.flatlist {
+  padding-left: 0;
+}
+
+ul.flatlist > li {
+  list-style-type: none;
+}
+
 /** Accordion **/
 
 /*

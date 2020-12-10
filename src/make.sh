@@ -17,19 +17,33 @@ done
 cd /www
 /src/mirroring/modify.sh
 
+capitalize() {
+  sed -E 's/-/ /g;s/(^| )./\U&/g' <<< "$1"
+}
+
 cd 4/archive
 tar --create --file all.tar.gz ./**/*.pdf
 {
   sed -n '/%%%/q;p' /src/4/archive/index.html.template
   for prefix in **/; do
     ls "$prefix"*.* >&- || continue
-    echo "<h2>$(basename "${prefix:0:-1}" | sed -E 's/-/ /g;s/(^| )./\U&/g')</h2>"
-    echo "<ul>"
-    for f in "$prefix"*; do
+    echo "<h2>$(capitalize "$(basename "${prefix%/}")")</h2>"
+    echo "<ul class=figure>"
+    for f in "$prefix"*.*; do
       core="${f##$prefix}"
-      suffix="${core: -15}"
-      core="${core%%$suffix}"
-      echo "  <li><a href=$f>$core</a>​$suffix</li>"
+      extension="${core##*.}"
+      core="${core%%.$extension}"
+      date="${core: -10}"
+      core="${core%%-$date}"
+      versionless="${core%%-v[0-9]*}"
+      version=
+      if [ ! "$versionless" = "$core" ]; then
+        version="${core##$versionless}"
+        core="${core%%$version}"
+        version=" ${version:1}"
+      fi
+      echo "  <li><a href=\"$f\">$(capitalize "$core")$version</a> (.$extension, $date)</li>"
+      echo "  <li><a href=\"$f\">$(capitalize "$core")$version</a> (.$extension, $date)</li>" >&2
     done
     echo "</ul>"
   done

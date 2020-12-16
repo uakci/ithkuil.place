@@ -9,6 +9,7 @@ resources, tools, weblets, and maybe even computer-friendly APIs and
 
 ```bash
 git submodule update --init --recursive
-docker build .
+make docker
 ```
 
+You’ll need `docker`, `pandoc`, `tree`, and coreutils, I think.

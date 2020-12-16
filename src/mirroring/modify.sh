@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e; shopt -s nullglob globstar
 
-cp -rs mirror mirror-mod
+cp -rulT mirror mirror-mod
 for f in mirror-mod/**/*.{htm,html}; do
   rm "$f"
   sed 's/<link [^>]*>//;/<style/,/<\/style>/d;/<head>/a <link rel="stylesheet" href="/common.css">' \

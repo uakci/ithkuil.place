@@ -113,6 +113,12 @@ a[href]:hover, a[href]:focus {
   color: var(--important-text-color);
 }
 
+:target::before {
+  position: absolute;
+  content: '◯';
+  left: 0.5vw;
+}
+
 /*** Dimensions & alignment ***/
 
 * {

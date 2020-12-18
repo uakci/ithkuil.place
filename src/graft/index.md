@@ -28,26 +28,21 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 
 ### Documentation and learning materials {#iv-docs}
 
--   [Most Recent Design
-    Documents](https://www.reddit.com/r/Ithkuil/comments/j5i75b/most_recent_design_documents/)
+-   [Most Recent Design Documents](https://www.reddit.com/r/Ithkuil/comments/j5i75b/most_recent_design_documents/)
     — the newest versions of each of the three regularly-updated design
     documents (in PDF form): Morpho-phonology, Lexical Roots, and VxCs
     Affixes ([what are those?](faq#iv-docs)). Make sure to get all of them.
 -   [TNIL documentation archive](4/archive/) (on-site) is where you’ll
     find links to older releases (to satisfy your curiosity).
--   [Morphology
-    cheatsheet](https://drive.google.com/drive/folders/1gAd7nto6PfKvwKvBHver1fwGe9PO7IfW)
+-   [Morphology cheatsheet](https://drive.google.com/drive/folders/1gAd7nto6PfKvwKvBHver1fwGe9PO7IfW)
     (Menotim) — a 2-page bird’s-eye overview of Morpho-phonology for
     quick and handy reference.
--   [Affixes v0.7.1,
-    bookmarked](https://cdn.discordapp.com/attachments/198559368772452352/768196761365381130/affix_list_0.7.1_bookmarked.pdf)
-    (Merox) — the Affixes v0.7.1 PDF, augmented with digital bookmarks
-    for easier navigation.
--   <span id="lexicon-db">[Collaborative TNIL Roots and Affixes
-    Spreadsheet](https://docs.google.com/spreadsheets/d/1JdaG1PaSQJRE2LpILvdzthbzz1k_a0VT86XSXouwGy8/edit)
+-   [Collaborative TNIL Roots and Affixes Spreadsheet](https://docs.google.com/spreadsheets/d/1JdaG1PaSQJRE2LpILvdzthbzz1k_a0VT86XSXouwGy8/edit)
     (Syst3ms, kiepier, Behemoth) — a computerized edition of the
-    lexicon, intended as the backing database for Syst3ms’ glossing
-    utility (see [below](#tnilgloss)).</span>
+    lexicon, intended as the backing database for….
+-   [TNILGloss](https://github.com/Syst3ms/TNILGloss)
+    (Behemoth4, Syst3ms) — a Discord utility bot that parses and provides
+    interlinear glosses for any TNIL input that you give it.
 
 ### Trinkets {#iv-trinkets}
 
@@ -55,41 +50,29 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 
 ### Texts {#iv-texts}
 
--   [TNIL Community Lexical
-    Supplement](https://docs.google.com/spreadsheets/d/1_RCOCVkRvZsSd5Vomfr8wDeRF7kUQ-feYOCkrQzXLCw/edit)
+-   [TNIL Community Lexical Supplement](https://docs.google.com/spreadsheets/d/1_RCOCVkRvZsSd5Vomfr8wDeRF7kUQ-feYOCkrQzXLCw/edit)
     (Ilmen, uakci, uagle…) — an informal dictionary in the works
     consisting of around 100 TNIL lexemes alongside their English
     renditions.
--   [TNIL translations &
-    stuff](https://docs.google.com/spreadsheets/d/1f88UJaJPDvOSCFx16-LSx931lyE6v5NPgsFw1P5VFjo/edit)
+-   [TNIL translations & stuff](https://docs.google.com/spreadsheets/d/1f88UJaJPDvOSCFx16-LSx931lyE6v5NPgsFw1P5VFjo/edit)
     (uakci; various authors) — an edited, back-translated,
     irregularly-updated anthology of original works, translations, and
     other works in TNIL.
 
 ### Miscellaneous {#iv-misc}
 
--   [ASCII-friendly TNIL
-    romanization](https://docs.google.com/document/d/1Dlf9xcVqBeHQYrnDpDVgb5WUiNDpyBA36frC5dJCVNM/edit)
-    (uagle)
+-   [ASCII-friendly TNIL romanization](https://docs.google.com/document/d/1Dlf9xcVqBeHQYrnDpDVgb5WUiNDpyBA36frC5dJCVNM/edit) (uagle)
 
 ### Outdated or incomplete resources {#iv-outdated}
 
--   [NILDB](https://github.com/Philosophical-Language-Group/NILDB) (by
-    HactarCE and porpoiseless) is a computer-readable listing of TNIL
+-   [NILDB](https://github.com/Philosophical-Language-Group/NILDB)
+    (by HactarCE and porpoiseless) is a computer-readable listing of TNIL
     Categories in YAML format.
 -   [Libre documentation](https://tnil.readthedocs.io/en/latest/)
     (porpoiseless, HactarCE)
--   [Roots v0.4,
-    bookmarked](https://cdn.discordapp.com/attachments/198559368772452352/766790575940698152/root_list_0.4_bookmarked.pdf)
+-   [Roots v0.4, bookmarked](https://cdn.discordapp.com/attachments/198559368772452352/766790575940698152/root_list_0.4_bookmarked.pdf),
+    [Affixes v0.7.1, bookmarked](https://cdn.discordapp.com/attachments/198559368772452352/768196761365381130/affix_list_0.7.1_bookmarked.pdf)
     (Merox)
--   <span
-    id="tnilgloss">[TNILGloss](https://github.com/Syst3ms/TNILGloss)
-    (Syst3ms) — a Discord utility bot that parses and provides
-    interlinear glosses for any TNIL input that you give it. Also gives
-    definitions for roots (pulling them from [the
-    database](#lexicon-db)). Currently stuck on v0.14.3; follow
-    [Behemoth’s fork](https://github.com/ngoriyasjil/TNILGloss) for
-    updates.</span>
 
 ### Offshoots {#iv-offshoots}
 
@@ -119,11 +102,9 @@ Ithkuil III is the Ithkuil that you can find on
     lexicon page. The link will take you to a nice user-friendly
     interface.
 -   PDFs for:
-    -   [All
-        roots](https://cdn.discordapp.com/attachments/184758428424601601/729292021382119454/All_Roots.pdf)
+    -   [All roots](https://cdn.discordapp.com/attachments/184758428424601601/729292021382119454/All_Roots.pdf)
         (Ilmen)
-    -   [All
-        suffixes](https://cdn.discordapp.com/attachments/184758428424601601/729292026486456360/All_Suffixes.pdf)
+    -   [All suffixes](https://cdn.discordapp.com/attachments/184758428424601601/729292026486456360/All_Suffixes.pdf)
         (Ilmen)
     -   [The whole website](https://vk.com/doc-7192938_71447375) (?)
 -   Cheatsheets:
@@ -132,8 +113,7 @@ Ithkuil III is the Ithkuil that you can find on
 -   phalp’s Introductory Ithkuil lessons:
     [1](https://www.reddit.com/r/Ithkuil/comments/1s1nrh/ithkuil_lesson_1_simple_nouns/),
     [2](https://www.reddit.com/r/Ithkuil/comments/1swc0s/ithkuil_lesson_2_verbs_sentences_case/),
-    [3 &
-    4](https://www.reddit.com/r/Ithkuil/comments/1v29l2/ithkuil_lessons_3_perspective_and_4_pras/).
+    [3 & 4](https://www.reddit.com/r/Ithkuil/comments/1v29l2/ithkuil_lessons_3_perspective_and_4_pras/).
 -   Memrise courses:
     -   [Ithkuil 4k vocab by
         class](https://www.memrise.com/course/2022297/ithkuil-4k-vocab-by-class/)
@@ -154,8 +134,7 @@ Ithkuil III is the Ithkuil that you can find on
 
 ### Texts {#iii-texts}
 
--   [Official Texts, Deviations,
-    Translations](https://docs.google.com/spreadsheets/d/1SRlpwOhZCaVB1LtdbhWGTWrKWKSL39C2pjOjF5OTZlA/edit)
+-   [Official Texts, Deviations, Translations](https://docs.google.com/spreadsheets/d/1SRlpwOhZCaVB1LtdbhWGTWrKWKSL39C2pjOjF5OTZlA/edit)
     (vulgak; various authors) — the definitive repository of Ithkuil III
     written output.
 -   [Small vocab list](https://pastebin.com/TrfNRvKr) (Ilmen) — a
@@ -169,8 +148,7 @@ Ithkuil III is the Ithkuil that you can find on
 
 Also known as Iţkuîl and Ilaksh. [Read more…](faq#historic)
 
--   [Web Archive snapshot of
-    ithkuil.net](https://web.archive.org/web/20090311041719/http://ithkuil.net/)
+-   [Web Archive snapshot of ithkuil.net](https://web.archive.org/web/20090311041719/http://ithkuil.net/)
     — incomplete (‘archaeological’!) documentation for 2004 & 2007
     Ithkuil.
     -   [On-site mirror](mirror/2004-en/)

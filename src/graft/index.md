@@ -47,6 +47,8 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 ### Trinkets {#iv-trinkets}
 
 -   [Pick a color, get the TNIL root!](4/colors/) (porpoiseless)
+-   [TNIL Romanization for IMEs](https://gist.github.com/uakci/db83384621fc02225173f334be7c4ff2)
+    (Christian Oudard)
 
 ### Texts {#iv-texts}
 

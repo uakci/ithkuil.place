@@ -22,8 +22,14 @@ steps:
       from_secret: registry_pass
     repo: ghcr.io/uakci/ithkuil.place
     tags: latest
+  when:
+    repo:
+    - uakci/ithkuil.place
 - name: webhook
   image: plugins/webhook
   settings:
     urls:
       from_secret: webhook_url
+  when:
+    repo:
+    - uakci/ithkuil.place

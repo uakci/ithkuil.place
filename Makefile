@@ -4,7 +4,7 @@ WWW     := $(TARGET)/www
 .PHONY: docker all allish clean graft nildb sitemap $(WWW)/4/archive
 
 all: | $(TARGET) $(WWW) allish sitemap
-allish: graft nildb $(WWW)/4/archive $(WWW)/mirror $(WWW)/mirror-mod $(TARGET)/etc/nginx/conf.d/default.conf
+allish: graft nildb $(WWW)/4/archive $(WWW)/mirror $(WWW)/mirror-mod $(TARGET)/etc/nginx/nginx.conf
 
 docker: all
 	docker build -t ithkuil.place .
@@ -19,9 +19,8 @@ $(WWW): www LICENSE
 	cp -rvuT www $(WWW)
 	cp -u LICENSE $(WWW)/LICENSE
 
-$(TARGET)/etc/nginx/conf.d/default.conf:
-	mkdir -p $(TARGET)/etc/nginx/conf.d
-	cp src/nginx.conf $@
+$(TARGET)/etc/nginx/nginx.conf: src/nginx.conf
+	install -D src/nginx.conf $@
 
 graft: $(patsubst src/graft/%,$(WWW)/%,$(patsubst %.md,%.html,$(wildcard src/graft/*.md)))
 

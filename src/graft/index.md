@@ -150,6 +150,7 @@ Ithkuil III is the Ithkuil that you can find on
 
 Also known as Iţkuîl and Ilaksh. [Read more…](faq#historic)
 
+-   [On-site mirror of ithkuil.net](mirror/2004-en-alt/)
 -   [Web Archive snapshot of ithkuil.net](https://web.archive.org/web/20090311041719/http://ithkuil.net/)
     — incomplete (‘archaeological’!) documentation for 2004 & 2007
     Ithkuil.

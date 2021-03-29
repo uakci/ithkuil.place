@@ -6,12 +6,16 @@ capitalize() {
   sed -E 's/-/ /g;s/(^| )./\U&/g' <<< "$1"
 }
 
+dehyphenate() {
+  sed -E 's/-/ /g' <<< "$1"
+}
+
 tar --create --file all.tar.gz ./**/*.pdf
 {
   sed -n '/%%%/q;p' "$1"
   for prefix in **/; do
     h=$(tr -cd / <<< "/$prefix" | wc -c)
-    echo "<h$h>$(capitalize "$(basename "${prefix%/}")")</h$h>"
+    echo "<h$h id=$(basename "${prefix%/}")>$(capitalize "$(basename "${prefix%/}")")</h$h>"
     [ -n "$(echo "$prefix"*?.?*)" ] || continue
     echo '<ul class=figure>'
     # shellcheck disable=sc2012

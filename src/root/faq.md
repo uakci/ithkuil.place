@@ -1,6 +1,7 @@
-FAQ
-Frequently Asked Questions about Ithkuil.
-Ithkuil FAQ
+pagename: FAQ
+description: Frequently Asked Questions about Ithkuil.
+heading: Ithkuil FAQ
+---
 
 ## Why the hell are there four Ithkuils?! {#wth}
 

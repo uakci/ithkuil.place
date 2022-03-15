@@ -1,6 +1,7 @@
-ithkuil.place
-Tools, resources, and APIs for the Ithkuilic languages.
-ithkuil.place
+pagename: ithkuil.place
+description: Tools, resources, and APIs for the Ithkuilic languages.
+heading: ithkuil.place
+---
 
 Welcome! <span lang="ithkuil">Wattunkí ruyün!</span> <span
 lang="ithkuil">Attawîláiff üpʰu!</span> On this webpage, you will find
@@ -28,10 +29,11 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 
 ### Documentation and learning materials {#iv-docs}
 
--   [Most Recent Design Documents](https://www.reddit.com/r/Ithkuil/comments/j5i75b/most_recent_design_documents/)
-    — the newest versions of each of the three regularly-updated design
-    documents (in PDF form): Morpho-phonology, Lexical Roots, and VxCs
-    Affixes ([what are those?](faq#iv-docs)). Make sure to get all of them.
+-   [*Welcome to the Ithkuil subreddit*](https://www.reddit.com/r/Ithkuil/comments/nnvuzn/welcome_to_the_ithkuil_subreddit_read_this_first/)
+    — *§ Ithkuil 4 resources* contains the newest versions of each of the three
+    regularly-updated design documents (in PDF form): Morpho-phonology, Lexical
+    Roots, and VxCs Affixes ([what are those?](faq#iv-docs)). Make sure to get
+    all of them.
 -   [TNIL documentation archive](4/archive/) (on-site) is where you’ll
     find links to older releases (to satisfy your curiosity).
 -   [Morphology cheatsheet](https://drive.google.com/drive/folders/1gAd7nto6PfKvwKvBHver1fwGe9PO7IfW)
@@ -40,7 +42,7 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 -   [Collaborative TNIL Roots and Affixes Spreadsheet](https://docs.google.com/spreadsheets/d/1JdaG1PaSQJRE2LpILvdzthbzz1k_a0VT86XSXouwGy8/edit)
     (Syst3ms, kiepier, Behemoth) — a computerized edition of the
     lexicon, intended as the backing database for….
--   [TNILGloss](https://github.com/Syst3ms/TNILGloss)
+-   [TNILGloss](https://github.com/ngoriyasjil/TNILGloss)
     (Behemoth4, Syst3ms) — a Discord utility bot that parses and provides
     interlinear glosses for any TNIL input that you give it.
 
@@ -54,7 +56,7 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
     (Ilmen, uakci, uagle…) — an informal dictionary in the works
     consisting of around 100 TNIL lexemes alongside their English
     renditions.
--   [TNIL translations & stuff](https://docs.google.com/spreadsheets/d/1f88UJaJPDvOSCFx16-LSx931lyE6v5NPgsFw1P5VFjo/edit)
+-   [TNIL translations & stuff](https://docs.google.com/spreadsheets/d/1EZeNRjCrcmyXH4an476bZO7Gh82kruEDCLZ-FXQUtek/edit#gid=862261570)
     (uakci; various authors) — an edited, back-translated,
     irregularly-updated anthology of original works, translations, and
     other works in TNIL.
@@ -78,7 +80,7 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 
 ### Offshoots {#iv-offshoots}
 
--   [Skewers](https://uakci.eu/files/skewers/skewers-0.3.pdf) (uakci;
+-   [Skewers](https://uakci.pl/files/skewers/skewers-0.3.pdf) (uakci;
     outdated as of now) — a morphological mod aiming to reduce the
     amount of arbitrariness in the language.
 -   [Freetnil](https://github.com/Philosophical-Language-Group/freetnil)

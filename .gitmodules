@@ -1,12 +1,12 @@
-[submodule "src/4/docs/freetnil"]
-	path = src/4/docs/freetnil
-	url = https://github.com/Philosophical-Language-Group/freetnil/
-[submodule "src/4/docs/nildb"]
-	path = src/4/docs/nildb
-	url = https://github.com/Philosophical-Language-Group/NILDB/
-[submodule "www/4/archive"]
-	path = www/4/archive
-	url = git://uakci.eu/ithkuil/archive/
-[submodule "www/mirror"]
-	path = www/mirror
-  url = git://uakci.eu/ithkuil/mirror/
+[submodule "src/root/4/archive"]
+	path = src/root/4/archive
+	url = https://git.uakci.pl/ithkuil/archive
+[submodule "src/root/mirror"]
+	path = src/root/mirror
+	url = https://git.uakci.pl/ithkuil/mirror
+[submodule "src/root/4/docs/freetnil"]
+	path = src/root/4/docs/freetnil
+	url = https://github.com/Philosophical-Language-Group/freetnil
+[submodule "src/root/4/docs/nildb"]
+	path = src/root/4/docs/nildb
+	url = https://github.com/Philosophical-Language-Group/nildb

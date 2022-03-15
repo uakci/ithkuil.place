@@ -1,12 +1,13 @@
-About this site
-About ithkuil.place.
-About
+pagename: About this site
+description: About ithkuil.place.
+heading: About
+---
 
 ## Development
 
 This website is developed [on
 GitHub](https://github.com/uakci/ithkuil.place), primarily by [me,
-uakci](https://uakci.eu). Please contact me if you have any questions
+uakci](https://uakci.pl). Please contact me if you have any questions
 regarding the operation of the site, any complaints or suggestions to
 make, or if you’d like to run your service/API here (which I’m fully
 encouraging of).

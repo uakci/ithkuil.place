@@ -7,12 +7,6 @@ steps:
   image: alpine/git
   commands:
   - git submodule update --init --recursive
-- name: build
-  image: ubuntu
-  commands:
-  - apt update
-  - apt install -y make pandoc tree docker
-  - make
 - name: docker
   image: plugins/docker
   settings:

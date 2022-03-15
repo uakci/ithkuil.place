@@ -1,0 +1,15 @@
+pagename: TNIL documentation archive
+heading: Old documentation
+---
+
+<style>
+  ul { font-feature-settings: "tnum"; }
+</style>
+
+You may download all the documents listed below in compressed form
+([.tar.gz](https://git.uakci.pl/ithkuil/archive/snapshot/archive-main.tar.gz),
+[.zip](https://git.uakci.pl/ithkuil/archive/snapshot/archive-main.zip)).
+
+Thanks to Ilmen, Hactar, and melop for helping collect these documents.
+
+---

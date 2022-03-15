@@ -1,10 +1,10 @@
-const colorRoots = ["gy", "aňr", "ml", "čw", "ḑr", "lw", "žl", "vm"],
-           stems = ["a" ,"ai", "ia"],
-       grayscale = ["xma-", "acvia-", "acva-", "acvai-", "bva-"];
+const colorRoots = ["gy", "ňr", "ml", "čw", "ḑr", "lw", "žl", "vm"],
+           stems = ["a" ,"e", "u"],
+       grayscale = ["axm-", "ucv-", "acv-", "ecv-", "abv-"];
 
 const colorStems = colorRoots.map(
   (root) => stems.map(
-    (stem) => root + stem + "-"
+    (stem) => stem + root + "-"
 )).reduce((curr, acc) => [...curr, ...acc], []);
 
 console.log(colorStems);

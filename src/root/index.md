@@ -42,7 +42,7 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 -   [Collaborative TNIL Roots and Affixes Spreadsheet](https://docs.google.com/spreadsheets/d/1JdaG1PaSQJRE2LpILvdzthbzz1k_a0VT86XSXouwGy8/edit)
     (Syst3ms, kiepier, Behemoth) — a computerized edition of the
     lexicon, intended as the backing database for….
--   [TNILGloss](https://github.com/ngoriyasjil/TNILGloss)
+-   [IthkuilGloss](https://github.com/ngoriyasjil/IthkuilGloss)
     (Behemoth4, Syst3ms) — a Discord utility bot that parses and provides
     interlinear glosses for any TNIL input that you give it.
 

@@ -98,7 +98,7 @@ heading: Ithkuil FAQ
 ## What documents/resources will I need to study Ithkuil IV? {#required-documents}
 
 > [The newest version of each of Morpho-phonology, Roots, and
-> Affixes](https://www.reddit.com/r/Ithkuil/comments/j5i75b/most_recent_design_documents/),
+> Affixes](https://www.reddit.com/r/Ithkuil/comments/nnvuzn/welcome_to_the_ithkuil_subreddit_read_this_first/).
 > and, at times, quick access to [ithkuil.net](http://ithkuil.net). You
 > don’t need to hold on to older versions of any of these documents
 > (unless as a keepsake? Then again, you can visit [the

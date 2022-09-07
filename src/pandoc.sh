@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if values="$(yq eval --front-matter=extract '.pagename,.description,.heading' "$1" 2>/dev/null)"
   then { read -r PAGENAME; read -r DESCRIPTION; read -r HEADING; } <<< "$values"
   else standalone=1; grep '^---$' "$1" && echo >&2 "file $1 seems to contain invalid front matter"
@@ -19,10 +21,10 @@ tee <<TEMPLATE
     </header>
     <main>
 
-`if test "$standalone"
+$(if test "$standalone"
   then tee
   else sed '0,/^---$/d'
-fi < "$1" | pandoc --fail-if-warnings`
+fi < "$1" | pandoc --fail-if-warnings)
 
     </main>
     <footer>

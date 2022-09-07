@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 shopt -s nullglob globstar
 
 capitalize() {
@@ -6,7 +7,7 @@ capitalize() {
 
 cat "$1"
 
-already_processed_latest=
+already_processed_latest=''
 for prefix in latest/ **/; do
   if [[ "$prefix" = latest/ ]]; then
     if [[ -z "$already_processed_latest" ]]
@@ -22,7 +23,6 @@ for prefix in latest/ **/; do
   [[ -n "$(echo "$prefix"*?.?*)" ]] || continue
   echo
 
-  # shellcheck disable=sc2012
   for f in "$prefix"*?.?*; do
     if link_target="$(readlink "$f")"; then
       core="$(basename "$link_target")"
@@ -31,24 +31,24 @@ for prefix in latest/ **/; do
     fi
 
     extension="${core##*.}"
-    core="${core%%.$extension}"
+    core="${core%%."$extension"}"
 
     date="${core: -10}"
-    core="${core%%-$date}"
+    core="${core%%-"$date"}"
 
     versionless="${core%%-v[0-9]*}"
     version=
     if [[ ! "$versionless" = "$core" ]]; then
-      version="${core##$versionless}"
-      core="${core%%$version}"
+      version="${core##"$versionless"}"
+      core="${core%%"$version"}"
       version="${version:1}"
     fi
 
     pre="$(capitalize "$core") "
     link="$version"
-    if [[ "$core" = "$(basename "$prefix")" ]]; then pre=; fi
-    if [[ -z "$version" ]]; then pre= link="$(capitalize "$core")"; fi
+    if [[ "$core" = "$(basename "$prefix")" ]]; then pre=''; fi
+    if [[ -z "$version" ]]; then pre='' link="$(capitalize "$core")"; fi
 
-    echo "* $pre[$link]($f) (.$extension, $date)"
+    echo "* ${pre}[$link]($f) (.$extension, $date)"
   done
 done

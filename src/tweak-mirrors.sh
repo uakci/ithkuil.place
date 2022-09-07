@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 shopt -s globstar nullglob
 
 for f in **/*.orig; do
@@ -17,13 +18,14 @@ for f in **/*.htm{,l}; do
   sed -i 's/iso-8859-1/utf-8/gi' "$f"
 done
 
-cat sources | while IFS=' ' read -r subdir cutdir baselink; do
+while IFS=' ' read -r subdir cutdir _baselink; do
   i=0; cutexp='https?://'; while (( i++ < cutdir )); do cutexp+='[^/"]*/'; done
-  for f in $subdir/*.htm{,l}; do
+  for f in "$subdir"/*.htm{,l}; do
+    # shellcheck disable=SC2016
     sed -Ei '
       s`="'"${cutexp}"'`="`g
       s`="([^"]*/)?([^"/]*.(jpg|gif|png|mp3))"`="../assets/\2"`gi
       s`</head>`<link rel=stylesheet href=/common.css>&`i
     ' "$f"
   done
-done
+done < sources

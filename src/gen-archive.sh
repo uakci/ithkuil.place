@@ -6,7 +6,14 @@ capitalize() {
 
 cat "$1"
 
-for prefix in **/; do
+already_processed_latest=
+for prefix in latest/ **/; do
+  if [[ "$prefix" = latest/ ]]; then
+    if [[ -z "$already_processed_latest" ]]
+    then already_processed_latest=1
+    else continue; fi
+  fi
+
   slashes=$(tr -cd / <<< "/$prefix")
   hashes="${slashes//\//\#}"
   secname="$(basename "${prefix%/}")"
@@ -17,7 +24,11 @@ for prefix in **/; do
 
   # shellcheck disable=sc2012
   for f in "$prefix"*?.?*; do
-    core="${f##"$prefix"}"
+    if link_target="$(readlink "$f")"; then
+      core="$(basename "$link_target")"
+    else
+      core="${f##"$prefix"}"
+    fi
 
     extension="${core##*.}"
     core="${core%%.$extension}"

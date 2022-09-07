@@ -6,6 +6,9 @@ bash /tweak-mirrors.sh
 
 echo archive; cd /root/4/archive
 bash /gen-archive.sh /archive.md.template > index.md
+cd /root/4/archive/latest
+tar czhf ../latest.tar.gz *
+zip -q ../latest.zip *
 
 echo nildb; cd /root/4/docs/freetnil/build
 for f in /root/4/docs/**/*.yml; do

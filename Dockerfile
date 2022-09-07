@@ -2,7 +2,7 @@ FROM alpine:edge AS static
 RUN rm -rf /root/
 COPY LICENSE /root/
 RUN sed -i '${p;s/community/testing/}' /etc/apk/repositories
-RUN apk add --no-cache bash file git pandoc sed yq
+RUN apk add --no-cache bash file git pandoc sed yq zip
 COPY src/ /
 RUN bash /all.sh
 

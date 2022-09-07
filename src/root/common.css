@@ -4,16 +4,16 @@
 
 html {
   /* Regular text */
-             --background-color: hsl(0deg, 0%, 100%);
+             --background-color: hsl(0deg, 0%, 90%);
               --body-text-color: hsl(0deg, 0%, 15%);
   /* Link coloring */
       --hyperlink-dormant-color: hsl(180deg, 80%, 40%);
   --hyperlink-highlighted-color: hsl(180deg, 40%, 40%);
   /* Regular notice/blockquote */
-      --notice-background-color: hsl(0deg, 0%, 90%);
+      --notice-background-color: hsl(0deg, 0%, 80%);
             --notice-text-color: hsl(0deg, 0%, 15%);
   /* Important/error-reporting notice */
-   --important-background-color: hsl(0deg, 75%, 90%);
+   --important-background-color: hsl(0deg, 75%, 80%);
          --important-text-color: hsl(0deg, 75%, 25%);
   /* Ithkuil text coloring */
            --ithkuil-text-color: hsl(0deg, 80%, 40%);
@@ -34,13 +34,13 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-               --background-color: hsl(0deg, 0%, 0%);
+               --background-color: hsl(0deg, 0%, 10%);
                 --body-text-color: hsl(0deg, 0%, 85%);
         --hyperlink-dormant-color: hsl(180deg, 40%, 60%);
     --hyperlink-highlighted-color: hsl(180deg, 80%, 60%);
-        --notice-background-color: hsl(0deg, 0%, 10%);
+        --notice-background-color: hsl(0deg, 0%, 20%);
               --notice-text-color: hsl(0deg, 0%, 85%);
-     --important-background-color: hsl(0deg, 75%, 10%);
+     --important-background-color: hsl(0deg, 75%, 20%);
            --important-text-color: hsl(0deg, 75%, 75%);
              --ithkuil-text-color: hsl(0deg, 80%, 60%);
   }

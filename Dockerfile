@@ -9,5 +9,5 @@ RUN bash /all.sh
 FROM caddy:alpine AS webserver
 COPY --from=static /root /www
 COPY src/Caddyfile /etc/caddy/Caddyfile
-RUN caddy validate -config /etc/caddy/Caddyfile
+RUN caddy validate --config /etc/caddy/Caddyfile
 EXPOSE 80

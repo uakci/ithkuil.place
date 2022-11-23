@@ -5,5 +5,5 @@ header /*.woff2 Cache-Control max-age=3600,public
 try_files {path} {path}.html {path}/ =404
 file_server /* browse
 file_server /mirror/* browse {
-  index index.txt
+	index index.txt
 }

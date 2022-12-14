@@ -80,7 +80,7 @@ Quijada’s newest, work-in-progress creation. [More info…](faq#iv)
 
 ### Offshoots {#iv-offshoots}
 
--   [Skewers](https://uakci.pl/files/skewers/skewers-0.3.pdf) (uakci;
+-   [Skewers](https://uakci.space/files/skewers/skewers-0.3.pdf) (uakci;
     outdated as of now) — a morphological mod aiming to reduce the
     amount of arbitrariness in the language.
 -   [Freetnil](https://github.com/Philosophical-Language-Group/freetnil)

@@ -1,9 +1,9 @@
 [submodule "src/root/4/archive"]
 	path = src/root/4/archive
-	url = https://git.uakci.pl/ithkuil/archive
+	url = https://git.uakci.space/ithkuil/archive
 [submodule "src/root/mirror"]
 	path = src/root/mirror
-	url = https://git.uakci.pl/ithkuil/mirror
+	url = https://git.uakci.space/ithkuil/mirror
 [submodule "src/root/4/docs/freetnil"]
 	path = src/root/4/docs/freetnil
 	url = https://github.com/Philosophical-Language-Group/freetnil
